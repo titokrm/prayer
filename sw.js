@@ -68,7 +68,9 @@ self.addEventListener('install', (e) => {
       '/prayer/images/IMG_008.jpg',
       '/prayer/images/IMG_003.jpg',
       '/prayer/images/IMG_006.jpg'
-    ])),
+    ])).catch(error => {
+      console.log('Service Worker call addAll failed:', error);
+    }),
   );
 });
 

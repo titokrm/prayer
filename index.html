@@ -357,7 +357,20 @@
   <script src="js/menuBurgerVanil.js"></script>
   <script>
     'use strict'
+
+    function registerServiceWorker() {
+      // регистрирует скрипт sw в поддерживаемых браузерах
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js', { scope: '/prayer/' }).then(() => {
+          console.log('Service Worker registered successfully.');
+        }).catch(error => {
+          console.log('Service Worker registration failed:', error);
+        });
+      }
+    }
+
     document.addEventListener('DOMContentLoaded', function () {
+      registerServiceWorker();
       menuSlide({
         mobWidthSetting: 768,
         changePosition: true,
@@ -562,6 +575,7 @@
         }
       });
       let arrowPress = false;
+
       document.addEventListener('keydown', event => {
         if ((event.code === 'ArrowRight' || event.code === 'ArrowLeft') && !arrowPress) {
           arrowPress = true;
