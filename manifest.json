@@ -11,5 +11,5 @@
   ],
   "name": "Молитвенник",
   "short_name": "Prayer book",
-  "start_url": "https://titokrm.github.io/prayer/index.html"
+  "start_url": "/prayer/index.html"
 }
