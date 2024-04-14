@@ -1,7 +1,7 @@
 ﻿{
   "background_color": "#fff",
   "description": "Молитвенный покров. Для защиты от бед и напастий на всех путях жизни",
-  "display": "fullscreen",
+  "display": "standalone",
   "icons": [
     {
       "src": "icon/android-chrome-512x512.png",
