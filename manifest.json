@@ -1,0 +1,15 @@
+﻿{
+  "background_color": "#fff",
+  "description": "Молитвенный покров. Для защиты от бед и напастий на всех путях жизни",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "icon/uaf.png",
+      "sizes": "500x500",
+      "type": "image/png"
+    }
+  ],
+  "name": "Молитвенник",
+  "short_name": "Prayer book",
+  "start_url": "/index.html"
+}
