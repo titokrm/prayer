@@ -4,8 +4,8 @@
   "display": "fullscreen",
   "icons": [
     {
-      "src": "icon/uaf.png",
-      "sizes": "500x500",
+      "src": "icon/android-chrome-512x512.png",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ],
