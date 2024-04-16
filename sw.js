@@ -3,7 +3,6 @@ self.addEventListener('install', (e) => {
     caches.open('fox-store').then((cache) => cache.addAll([
       './',
       './index.html',
-      './index.js',
       './css/styles.css',
       './icon/android-chrome-192x192.png',
       './icon/android-chrome-512x512.png',
