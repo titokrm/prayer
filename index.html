@@ -90,8 +90,9 @@
           <img src="images/close.svg" alt="">
         </button>
         <ul class="menu__list">
-          <li class="menu__item"><a class="menu__link" href="#">МОЛИТВЫ В ТЕЧЕНИЕ ДНЯ</a></li>
-          <li class="menu__item"><a class="menu__link" href="#">Поучения о молитве преподобного Иоанна Лествичника</a>
+          <li class="menu__item"><a class="menu__link" href="images/2-3.jpg">МОЛИТВЫ В ТЕЧЕНИЕ ДНЯ</a></li>
+          <li class="menu__item"><a class="menu__link" href="images/2-3.jpg">Поучения о молитве преподобного Иоанна
+              Лествичника</a>
           </li>
           <li class="menu__item"><a class="menu__link" href="images/4-5.jpg">Молитва о даровании молитвы</a></li>
           <li class="menu__item"><a class="menu__link" href="images/4-5.jpg">Молитва человека, страдающего рассеянием,
@@ -661,13 +662,14 @@
         arrowPress = false;
       });
       let oldMenuHtml = document.querySelector('.menu__list').innerHTML;
-      document.querySelector('.header__search').addEventListener('submit', event => {
+      document.querySelector('.header__search input').addEventListener('input', event => {
         event.preventDefault();
         //        console.log('Submit');
         const serachField = document.querySelector('.header__search input');
         const searchStr = serachField.value.toUpperCase();
         //        console.log('Search = ', searchStr);
         let menuNode = document.querySelector('.menu__list');
+        menuNode.innerHTML = oldMenuHtml; // обнуляем предыдущий поиск выводя список не фильтруя - весь целиком
         if (searchStr === '') {
           menuNode.innerHTML = oldMenuHtml;
         } else {
@@ -681,7 +683,7 @@
           menuNode.innerHTML = '';
           resultSearch.forEach(item => menuNode.append(item));
         }
-        serachField.blur();
+        // serachField.blur(); // сбрасываем фокус, если нужно чтобы поиск происходил не на лету, а по Enter, то рскоментировать эту строку и закоментить menuNode.innerHTML = oldMenuHtml и заменить событие на submit
         savePosition();
       });
       if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
